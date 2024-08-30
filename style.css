@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #1e90ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.card .back {
+    background-color: #1e90ff;
+}
+
+.card .front {
+    transform: rotateY(180deg);
+}
+
+.card.apple .front {
+    background-color: #ff4d4d;
+}
+
+.card.banana .front {
+    background-color: #ffff66;
+}
+
+.card.grape .front {
+    background-color: #9966cc;
+}
+
+.card.cherry .front {
+    background-color: #ff6666;
+}
+
+.card.watermelon .front {
+    background-color: #66ff66;
+}
+
+.card.lemon .front {
+    background-color: #ffff99;
+}
+
+.card.strawberry .front {
+    background-color: #ff9999;
+}
+
+.card.peach .front {
+    background-color: #ffcc99;
+}
+#resetButton {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
